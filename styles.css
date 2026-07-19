@@ -1,0 +1,327 @@
+/* ===========================
+   CSS RESET
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 20px 40px 60px;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #ffe082;
+}
+
+/* Dark Mode Button */
+
+#dark-btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#dark-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+#hero-title {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #hero-title {
+    color: #FFD700;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+
+section {
+    margin-bottom: 70px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2563eb;
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+#about p {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.skill-card {
+    background: white;
+    width: 250px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ===========================
+   PROJECTS
+=========================== */
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    width: 320px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    color: #2563eb;
+}
+
+/* ===========================
+   API SECTION
+=========================== */
+
+#api-section {
+    text-align: center;
+}
+
+#quote-btn {
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#quote-btn:hover {
+    background: #1d4ed8;
+}
+
+#quote {
+    font-size: 18px;
+    font-style: italic;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+footer h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #81d4fa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   DARK MODE
+=========================== */
+
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+body.dark-mode section h2 {
+    color: #90caf9;
+}
+
+body.dark-mode .skill-card,
+body.dark-mode .project-card {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode .project-card h3 {
+    color: #90caf9;
+}
+
+body.dark-mode footer {
+    background: #000;
+}
+
+body.dark-mode #quote-btn {
+    background: #7c3aed;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-container,
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+
+}
